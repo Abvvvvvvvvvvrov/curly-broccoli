@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>velyasik | Personal Hub</title>
+  <!-- Шрифты Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Иконки FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #0b0d13;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(168, 85, 247, 0.15) 0px, transparent 50%);
+      font-family: 'Montserrat', sans-serif;
+      color: #f1f5f9;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+
+    .card {
+      background: rgba(18, 22, 34, 0.7);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      padding: 40px 32px;
+      width: 100%;
+      max-width: 440px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .avatar-wrapper {
+      position: relative;
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 20px auto;
+    }
+
+    .avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(168, 85, 247, 0.6);
+      box-shadow: 0 0 25px rgba(168, 85, 247, 0.4);
+    }
+
+    .badge-online {
+      position: absolute;
+      bottom: 6px;
+      right: 6px;
+      width: 16px;
+      height: 16px;
+      background: #22c55e;
+      border: 3px solid #0f121d;
+      border-radius: 50%;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+
+    .domain-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      color: #a855f7;
+      background: rgba(168, 85, 247, 0.1);
+      border: 1px solid rgba(168, 85, 247, 0.25);
+      padding: 4px 12px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+
+    .bio {
+      font-size: 0.95rem;
+      color: #94a3b8;
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .link-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+      color: #f1f5f9;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.25s ease;
+    }
+
+    .link-item i {
+      font-size: 1.25rem;
+      width: 24px;
+      text-align: center;
+    }
+
+    .link-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .link-item:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(168, 85, 247, 0.5);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(168, 85, 247, 0.2);
+      color: #fff;
+    }
+
+    footer {
+      margin-top: 32px;
+      font-size: 0.75rem;
+      color: #475569;
+      font-family: 'JetBrains Mono', monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="avatar-wrapper">
+      <!-- Замените ссылку на свою аватарку -->
+      <img src="https://api.dicebear.com/7.x/bottts/svg?seed=velyasik" alt="Avatar" class="avatar">
+      <div class="badge-online" title="Online"></div>
+    </div>
+
+    <h1>velyasik</h1>
+    <div class="domain-tag">velyasik.bond</div>
+    <p class="bio">Developer & Gamer. Мой личный профиль и ссылки на проекты.</p>
+
+    <div class="links">
+      <a href="https://t.me/your_telegram" target="_blank" class="link-item">
+        <div class="link-left">
+          <i class="fa-brands fa-telegram" style="color: #229ED9;"></i>
+          <span>Telegram</span>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem; color: #64748b;"></i>
+      </a>
+
+      <a href="https://discord.com" target="_blank" class="link-item">
+        <div class="link-left">
+          <i class="fa-brands fa-discord" style="color: #5865F2;"></i>
+          <span>Discord</span>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem; color: #64748b;"></i>
+      </a>
+
+      <a href="https://steamcommunity.com" target="_blank" class="link-item">
+        <div class="link-left">
+          <i class="fa-brands fa-steam" style="color: #ffffff;"></i>
+          <span>Steam Profile</span>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem; color: #64748b;"></i>
+      </a>
+
+      <a href="https://github.com" target="_blank" class="link-item">
+        <div class="link-left">
+          <i class="fa-brands fa-github" style="color: #f1f5f9;"></i>
+          <span>GitHub</span>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem; color: #64748b;"></i>
+      </a>
+    </div>
+
+    <footer>© 2026 velyasik.bond</footer>
+  </div>
+
+</body>
+</html>
